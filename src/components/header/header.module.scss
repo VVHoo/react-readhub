@@ -1,0 +1,21 @@
+@import "../../style/color";
+
+header {
+  height: 60px;
+  line-height: 60px;
+  background-color: $white;
+  border-bottom: 1px solid $grey-light;
+  position: relative;
+  .content {
+    height: 100%;
+    .navLink {
+
+    }
+  }
+}
+@media screen and (min-width: 769px) {
+  header > .content{
+    width: 718px;
+    margin: 0 auto;
+  }
+}
