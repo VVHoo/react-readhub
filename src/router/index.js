@@ -25,11 +25,11 @@ export default [
           {
             path: '/',
             exact: true,
-            render: () => <Redirect to='/topic' />
+            render: () => <Redirect to='/topics' />
           },
           {
-            path: '/topic',
-            keys: 'topic',
+            path: '/topics',
+            keys: 'topics',
             component: () => SuspenseComponent(TopicComponent)
           },
           {

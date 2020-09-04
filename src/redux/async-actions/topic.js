@@ -1,9 +1,14 @@
 import { getTopicList } from '../../service/topic'
 import { setTopicList } from '../actions'
 
-export default function getTopics (params) {
-  return async (dispatch) => {
-    const result = await getTopicList(params)
-    dispatch(setTopicList, result)
+const getTopics = (params) => {
+  return (dispatch) => {
+    getTopicList(params).then(res => {
+      dispatch(setTopicList(res.data))
+    })
   }
+}
+
+export {
+  getTopics
 }

@@ -1,10 +1,10 @@
 import axios from 'axios'
 import Qs from 'qs'
 
-export const baseUrl = "https://api.readhub.cn/"
+// export const baseUrl = "https://api.readhub.cn/"
 
 const service = axios.create({
-  baseURL: process.env.VUE_APP_API_BASE_URL, // api base_url
+  // baseURL: baseUrl, // api base_url
   timeout: 30000, // 请求超时时间，
   withCredentials: true,
   headers: {

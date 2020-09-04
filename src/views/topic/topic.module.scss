@@ -1,0 +1,29 @@
+@import "../../style/mixins";
+@import "../../style/color";
+
+.main {
+  margin: 38px auto 0;
+  background-color: $white;
+  .wrapper {
+    @include spaceBetween;
+    .content {
+      flex: 1;
+      .itemList {
+      }
+    }
+    .side {
+      margin-left: 30px;
+      width: 292px;
+    }
+  }
+}
+@media screen and (min-width: 769px) {
+  .main {
+    width: 748px;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .main {
+    width: 960px;
+  }
+}

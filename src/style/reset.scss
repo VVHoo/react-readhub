@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  background: #fff;
+  font-family: PingFang SC,Tahoma,Helvetica,Arial,Hiragino Sans GB,Microsoft YaHei,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix:before,.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+#root {
+  background-color: #ffffff;
+}

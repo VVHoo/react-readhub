@@ -1,0 +1,30 @@
+@import "../../style/font";
+@import "../../style/color";
+.topicItem {
+  .topicTitle {
+    font-weight: 500;
+    color: $textColor;
+    font-size: $topicTitleSize;
+    line-height: 1.78em;
+    padding-bottom: 8px;
+    padding-top: 30px;
+    cursor: pointer;
+    position: relative;
+    > a {
+      margin-right: 15px;
+      color: $textColor;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+        color: $purple;
+      }
+    }
+    .time {
+      font-size: $font-size-small;
+      color: $tagColor;
+      font-weight: 400;
+      display: inline-block;
+      line-height: 1;
+    }
+  }
+}

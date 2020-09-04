@@ -1,4 +1,6 @@
+@import "../../style/font";
 @import "../../style/color";
+@import "../../style/mixins";
 
 header {
   height: 60px;
@@ -7,15 +9,50 @@ header {
   border-bottom: 1px solid $grey-light;
   position: relative;
   .content {
-    height: 100%;
+    margin: 0 auto;
+    .logo {
+      float: left;
+      box-sizing: border-box;
+      padding-top: 8px;
+      margin-right: 30px;
+      img {
+        width: 130px;
+      }
+    }
     .navLink {
-
+      display: inline-block;
+      > a {
+        margin-right: 40px;
+        color: $titleColor;
+        text-decoration: none;
+        font-size: $titleSize;
+        &.active {
+          font-weight: 700;
+          color: $purple;
+        }
+        &:hover {
+          font-weight: 700;
+          color: $purple;
+        }
+      }
     }
   }
 }
+
 @media screen and (min-width: 769px) {
   header > .content{
     width: 718px;
-    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  header > .content {
+    width: 860px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  header > .content {
+    width: 960px;
   }
 }
