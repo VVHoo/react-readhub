@@ -1,5 +1,6 @@
 @import "../../style/mixins";
 @import "../../style/color";
+@import "../../style/font";
 
 .main {
   margin: 38px auto 0;
@@ -14,6 +15,32 @@
     .side {
       margin-left: 30px;
       width: 292px;
+    }
+  }
+  .listButtonFix {
+    margin: 25px 0 65px;
+    .listButton {
+      height: 40px;
+      line-height: 40px;
+      font-size: $font-size-small;
+      width: 100%;
+      font-weight: 500;
+      color: gray;
+      border: 1px solid #d7d8db;
+      position: relative;
+      border-radius: 6px;
+      text-align: center;
+      background-color: $white;
+      cursor: pointer;
+      &:hover {
+        background-color: $grey;
+      }
+    }
+    .loadingIcon {
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin: 0 auto;
     }
   }
 }

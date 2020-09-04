@@ -8,7 +8,11 @@ const initialState = {
 function combineTopicList (topicList = initialState.topicList, action) {
   switch (action.type) {
     case ActionTypes.SET_TOPIC_LIST:
-      return action.topicList;
+      if (topicList.length) {
+        return topicList.concat(action.topicList)
+      } else {
+        return action.topicList;
+      }
     default:
       return topicList;
   }

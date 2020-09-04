@@ -1,6 +1,9 @@
 @import "../../style/font";
 @import "../../style/color";
+@import "../../style/mixins";
 .topicItem {
+  position: relative;
+  border-bottom: 1px solid $borderColor;
   .topicTitle {
     font-weight: 500;
     color: $textColor;
@@ -26,5 +29,13 @@
       display: inline-block;
       line-height: 1;
     }
+  }
+  .summary {
+    color: $summaryColor;
+    font-size: 15px;
+    line-height: 1.8em;
+    cursor: pointer;
+    padding-bottom: 30px;
+    overflow: hidden;
   }
 }

@@ -1,9 +1,10 @@
 import React from "react";
 import style from "./topicitem.module.scss"
 import { Link } from "react-router-dom";
+import { fromNowFormat } from '../../utils/timeFormat'
 
 function TopicItem (props) {
-  const { title, id, updatedAt } = props
+  const { title, id, createdAt, summary } = props
   const getUrl = (id) => {
     return `/topic/${id}`
   }
@@ -13,8 +14,9 @@ function TopicItem (props) {
         <Link target="_blank" rel="noopener noreferrer" to={getUrl(id)}>
           {title}
         </Link>
-        <span className={style.time}>{updatedAt}</span>
+        <span className={style.time}>{fromNowFormat(createdAt)}</span>
       </h2>
+      <div className={style.summary}>{summary}</div>
     </div>
   )
 }
