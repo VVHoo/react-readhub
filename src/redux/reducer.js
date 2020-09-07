@@ -2,7 +2,8 @@ import * as ActionTypes from './action-types'
 import {combineReducers} from "redux";
 
 const initialState = {
-  topicList: []
+  topicList: [],
+  topicLoading: false
 }
 
 function combineTopicList (topicList = initialState.topicList, action) {
@@ -17,9 +18,18 @@ function combineTopicList (topicList = initialState.topicList, action) {
       return topicList;
   }
 }
+function combineTopicLoading (loading = initialState.topicLoading, action) {
+  switch (action.type) {
+    case ActionTypes.SET_TOPIC_LOADING:
+      return action.status
+    default:
+      return loading
+  }
+}
 
 const reducer = combineReducers({
-  topicList: combineTopicList
+  topicList: combineTopicList,
+  topicLoading: combineTopicLoading
 })
 
 export default reducer

@@ -1,2 +1,3 @@
 export const GET_TOPIC_LIST = 'GET_TOPIC_LIST'
 export const SET_TOPIC_LIST = 'SET_TOPIC_LIST'
+export const SET_TOPIC_LOADING = 'SET_TOPIC_LOADING'

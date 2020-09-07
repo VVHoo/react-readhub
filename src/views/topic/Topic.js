@@ -1,13 +1,12 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect } from 'react'
 import TopicItem from '../../components/TopicItem/TopicItem'
 import { connect } from 'react-redux'
 import { getTopics } from '../../redux/async-actions/topic'
 import style from './topic.module.scss'
 
 function Topic (props) {
-  const { topicList } = props
+  const { topicList, loading } = props
   const { getTopicListDataDispatch } = props
-  const [loading, setLoading] = useState(false)
   useEffect(() => {
     if (!topicList.length) {
       getTopicListDataDispatch({ pageSize: 20, lastCursor: '' })
@@ -15,13 +14,11 @@ function Topic (props) {
   }, [getTopicListDataDispatch, topicList.length])
   
   function loadMore () {
-    setLoading(true)
     const params = {
       pageSize: 20,
       lastCursor: topicList[topicList.length - 1].order
     }
     getTopicListDataDispatch(params)
-    setLoading(loading => !loading)
   }
   return (
     <main className={style.main}>
@@ -51,6 +48,7 @@ function Topic (props) {
 }
 const mapStateToProps = (state) => ({
   topicList: state.topicList,
+  loading: state.topicLoading
 });
 
 const mapDispatchToProps = (dispatch) => {
